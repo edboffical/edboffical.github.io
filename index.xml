@@ -2,43 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>callous&#39; blog</title>
-    <link>https://edboffical.github.io/</link>
+    <link>https://t.callous.cn/</link>
     <description>Recent content on callous&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Nov 2020 23:03:22 +0800</lastBuildDate><atom:link href="https://edboffical.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 23:03:22 +0800</lastBuildDate><atom:link href="https://t.callous.cn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mimi</title>
-      <link>https://edboffical.github.io/blog/life/mimi/</link>
+      <link>https://t.callous.cn/blog/life/mimi/</link>
       <pubDate>Tue, 10 Nov 2020 23:03:22 +0800</pubDate>
       
-      <guid>https://edboffical.github.io/blog/life/mimi/</guid>
+      <guid>https://t.callous.cn/blog/life/mimi/</guid>
       <description>咪咪是世界上最听话的小狗</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://edboffical.github.io/about/</link>
+      <link>https://t.callous.cn/about/</link>
       <pubDate>Tue, 10 Nov 2020 23:03:11 +0800</pubDate>
       
-      <guid>https://edboffical.github.io/about/</guid>
+      <guid>https://t.callous.cn/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tech</title>
-      <link>https://edboffical.github.io/blog/tech/</link>
+      <link>https://t.callous.cn/blog/tech/</link>
       <pubDate>Tue, 10 Nov 2020 23:03:01 +0800</pubDate>
       
-      <guid>https://edboffical.github.io/blog/tech/</guid>
-      <description>以后我会在这里分享技术 </description>
+      <guid>https://t.callous.cn/blog/tech/</guid>
+      <description>以后我会在这里分享技术 test </description>
     </item>
     
     <item>
       <title>Archive</title>
-      <link>https://edboffical.github.io/archives/</link>
+      <link>https://t.callous.cn/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://edboffical.github.io/archives/</guid>
+      <guid>https://t.callous.cn/archives/</guid>
       <description>archives</description>
     </item>
     
