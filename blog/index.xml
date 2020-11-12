@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on callous&#39; blog</title>
-    <link>https://t.callous.cn/blog/</link>
+    <link>https://callous.cn/blog/</link>
     <description>Recent content in Blogs on callous&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Nov 2020 23:03:22 +0800</lastBuildDate><atom:link href="https://t.callous.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 23:03:22 +0800</lastBuildDate><atom:link href="https://callous.cn/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mimi</title>
-      <link>https://t.callous.cn/blog/life/mimi/</link>
+      <link>https://callous.cn/blog/life/mimi/</link>
       <pubDate>Tue, 10 Nov 2020 23:03:22 +0800</pubDate>
       
-      <guid>https://t.callous.cn/blog/life/mimi/</guid>
+      <guid>https://callous.cn/blog/life/mimi/</guid>
       <description>咪咪是世界上最听话的小狗</description>
     </item>
     
     <item>
       <title>Tech</title>
-      <link>https://t.callous.cn/blog/tech/</link>
+      <link>https://callous.cn/blog/tech/</link>
       <pubDate>Tue, 10 Nov 2020 23:03:01 +0800</pubDate>
       
-      <guid>https://t.callous.cn/blog/tech/</guid>
+      <guid>https://callous.cn/blog/tech/</guid>
       <description>以后我会在这里分享技术 test </description>
     </item>
     

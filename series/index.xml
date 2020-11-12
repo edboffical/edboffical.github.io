@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on callous&#39; blog</title>
-    <link>https://t.callous.cn/series/</link>
+    <link>https://callous.cn/series/</link>
     <description>Recent content in Series on callous&#39; blog</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://t.callous.cn/series/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://callous.cn/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
