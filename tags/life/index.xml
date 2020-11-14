@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on callous&#39; blog</title>
-    <link>https://callous.cn/blog/</link>
-    <description>Recent content in Blogs on callous&#39; blog</description>
+    <title>life on callous&#39; blog</title>
+    <link>https://callous.cn/tags/life/</link>
+    <description>Recent content in life on callous&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 10 Nov 2020 23:03:22 +0800</lastBuildDate><atom:link href="https://callous.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 10 Nov 2020 23:03:22 +0800</lastBuildDate><atom:link href="https://callous.cn/tags/life/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mimi</title>
       <link>https://callous.cn/blog/life/mimi/</link>
@@ -17,15 +17,6 @@
 第一天晚上，就感觉你好像也喜欢和我一起，可能是之前的主人对你不好。在我家你也是第二个毛孩子，然而还好，66（大白狗）像是一个大哥，在家有吵闹，在外都护着你。听说你们狗一生只认一个主人，66认的是我妈。你应该不是因为因为怕争宠，才认的我吧？你肯定也明白，只有我会在雨天抱着你回家，只有我会给你多些吃的，或者说你一直都觉得是我帮你脱离了苦海😊，总之你只认我，无论我回校读书几个月，只要一回家，你总抛弃我妈，跟我形影不离，好像真的就怕我的屁掉了，你接不到。一起吃夜宵、上网、逛街、熬夜，永远都跟在我身边，只要一下不见我，就开始慌张，有时候我也会躲在角落里，看慌张的你，然后哈哈笑。我还带你去过学校，为了躲保安，拎着你翻墙，还给围栏捅了一刀。直到我工作，还以为有能力把你接到我身边。我把你接来我的城市，在房子里给你安排了一个角落。但是那会，老大也是初入社会，以为工作除了认真别无选择。我总很晚下班，然后才带你在小区走一遭。那段时间，你一天就外出一次，所有屎尿都得憋到晚上，一定很难受，但每次带你出门，你都开心到发癫，不过好像也从来没有怪过我。就这样过了大半年，直到我被通知要“处理掉”你。那时候虽然有点无奈，但毕竟这大半年，你的生活质量很不高，就决定送你回去了。
 后来我也是很久回一次家，你也还是和以前一样。只要我回来，就跟着我。你一定很期待我回家，每次返程都想跳上车跟我走。一直想着，等以后有条件了，再接你过来，直到11月9日，你的生命戛然而止，没有告别，我也再也没有机会了。
 我不会忘记我的小棕狗，你让我懂得了珍惜身边的人和东西，谢谢你这些年的陪伴。</description>
-    </item>
-    
-    <item>
-      <title>Tech</title>
-      <link>https://callous.cn/blog/tech/</link>
-      <pubDate>Tue, 10 Nov 2020 23:03:01 +0800</pubDate>
-      
-      <guid>https://callous.cn/blog/tech/</guid>
-      <description>以后我会在这里分享技术 console.log(&amp;quot;hello world&amp;quot;); </description>
     </item>
     
   </channel>
