@@ -29,12 +29,15 @@
     </item>
     
     <item>
-      <title>Tech</title>
-      <link>https://callous.cn/blog/tech/</link>
-      <pubDate>Tue, 10 Nov 2020 23:03:01 +0800</pubDate>
+      <title>2019抓取爱奇艺视频原地址</title>
+      <link>https://callous.cn/blog/tech/iqiyi/</link>
+      <pubDate>Sat, 29 Jun 2019 23:03:01 +0800</pubDate>
       
-      <guid>https://callous.cn/blog/tech/</guid>
-      <description>以后我会在这里分享技术 console.log(&amp;quot;hello world&amp;quot;); </description>
+      <guid>https://callous.cn/blog/tech/iqiyi/</guid>
+      <description>写这篇文章的目的 记录一下自己做过的事和学过的东西，希望大家抱着学习的目的来探讨。
+过程 因为我对移动端的涉猎并不多，所以这次还是拿爱奇艺的网站来研究。配合 chrome dev tools （真好用），我发现pc端网页采用了hls协议，视频被切成 9 - 10 秒，这个可以用 ffmpeg 来下载列表视频，然后合成文件。因为游戏服务端的开发工作，我并没有很多空闲的时间，所以我转而研究了手机网页端。但其实两个分析的思路都差不多&amp;hellip;&amp;hellip;..
+开始 先把 chrome dev tools 的模式切换到手机模式，然后随便点进一个电视剧或者电影的播放页面，刷新之后很容易找到请求视频地址的连接，如下图： 这里大概列下参数，太多了，一些可以断定的、可为空的或者不变的我就跳过了（可以看下面的js代码，有些直接就写死了）：
+tvid=2763030300 // 电视剧Id &amp;amp;vid=efa9e607d213c7bb066360f0005db9c6 // 视频Id &amp;amp;bid=300 // 跟清晰度有关 下同 &amp;amp;abid=300 // 高清是300 清晰是200 &amp;amp;src=02020031010000000000 // 不变 &amp;amp;uid=1150484048 // uid 或空 &amp;amp;ut=1 // 不变 &amp;amp;ori=h5 // 来源 不变 &amp;amp;ps=0 // 不变 &amp;amp;messageId=dash_445455783d1046029fef03f7c3ba0f9f &amp;amp;ost=0 不变 &amp;amp;preIdAll= 不变 &amp;amp;locale=zh_cn 不变 &amp;amp;dfp=a0c99fd2610cf0473db8c0a7a62ac5a31577353dc9d69a44d2a164beb455ffa1fd // 可为空 &amp;amp;k_tag=1 // 不变 &amp;amp;k_ft1=18141941858304 &amp;amp;k_ft5=1 // 不变 &amp;amp;k_err_retries=3 // 不变 &amp;amp;k_uid=uct4vh5s98nnnm00uxfwg73l // 可为随机32位 String &amp;amp;pt=0 // 不变 &amp;amp;lid= // 不变 &amp;amp;cf= // 不变 &amp;amp;ct= // 不变 &amp;amp;ve=4d0345aec113399e2fc983530b36a907 &amp;amp;qd_v=2 // 暂时不变 &amp;amp;tm=1561334052647 // 时间戳 &amp;amp;qdy=a // 不变 &amp;amp;qds=0 // 不变 &amp;amp;vf=64adc57825317ca25c852960f19e3422 &amp;amp;callback=Z1561334031787 看了下大概的参数，然后在 chrome dev tools的资源页面搜索了一下关键字 k_uid，当然是混淆过的js，还是一行。 用工具自带的preety print功能后，稍微能看一点（感觉chrome事先都猜到了你想要的所有东西），这里上图： 分析参数 现在我们剩下需要分析的参数是：messageId,k_ft1,ve 和上图函数里没有列出的callback和vf，我们一个个来</description>
     </item>
     
     <item>
