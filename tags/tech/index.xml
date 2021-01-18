@@ -5,7 +5,25 @@
     <link>https://callous.cn/tags/tech/</link>
     <description>Recent content in tech on callous&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 29 Jun 2019 23:03:01 +0800</lastBuildDate><atom:link href="https://callous.cn/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Jan 2021 18:00:00 +0800</lastBuildDate><atom:link href="https://callous.cn/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记录一次游戏服务 oom 抢救</title>
+      <link>https://callous.cn/blog/tech/oom/</link>
+      <pubDate>Mon, 18 Jan 2021 18:00:00 +0800</pubDate>
+      
+      <guid>https://callous.cn/blog/tech/oom/</guid>
+      <description>起因 原本愉快的周日晚上，突然有客服部门的妹子在群里说游戏挂了！进不去了！还有一堆房间不存在的问题！
+先说下这个挂掉的游戏，是从别的部门接手过来的，原班人马基本都离职了，留下一堆杂乱的资料，game 服务是用 c++ 写的。
+解救玩家 因为事情出得比较急，而且导致了大规模的玩家不能登录游戏，所以领导的首先要求是解救玩家。单从现象上分析，大致猜测是某些原因导致的 game 服务崩溃或者失去响应，导致玩家无法进入房间。玩家的 room 信息应该会存在缓存当中。大概看了下代码，定位到关键位置，这里贴一下部分代码：
+这里不得不吐槽一下，既然 Enter 房间不成功都会 Remove 掉这个缓存，在房间不存在的时候竟然不做处理，直接返回。另外，更不能理解的是重启服务也不会删除这个缓存，也就是说 game 因为故障崩溃掉的话，这里的玩家永远都会提示 “房间不存在”。
+现在知道了，玩家的 room 缓存在 memcache 里，只要清除掉这些失效的 key，就能解放这些玩家。但是问题又来了，仅凭 key 的 value 无法判断出这个玩家的 room 是否失效了。于是又去看代码，最后的解决方案是带这个 key 前缀的键值全部清除，虽然这样会对正常游戏的玩家有点小影响，但也是总结了诸多方案中影响最小的方案，也幸亏他不完全是依赖缓存去找玩家的房间。
+平时工作中接触的大部分是 redis，对 memcache 相对了解较少。看了官方文档后，发现并没有批量删除的方法，也没有获取一个前缀所有 key 的类似命令，所以批量删除只能写脚本。
+然后问题又来了，我们并不知道哪些玩家卡在房间里了，如果是全服遍历，明显不可能，因为有大概　1000w 的用户数据。
+最后的方案，是从数据库查询导出了所有当天登陆过得用户，大概是 9w 多条，还能接受。
+于是写了下面的 go 程序：
+mc := memcache.New(&amp;#34;memcache.xxxxxxx.xxxxx.xxxx.com:11211&amp;#34;) fmt.Println(&amp;#34;memcache error:&amp;#34;, mc.Ping()) time.Sleep(time.Second * 2) dealCount := 0 for _, v := range config.Records { key := &amp;#34;NOWSEVERID_&amp;#34; + v.</description>
+    </item>
+    
     <item>
       <title>2019抓取爱奇艺视频原地址</title>
       <link>https://callous.cn/blog/tech/iqiyi/</link>
