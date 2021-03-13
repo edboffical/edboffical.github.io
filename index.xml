@@ -5,7 +5,43 @@
     <link>https://callous.cn/</link>
     <description>Recent content on callous&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 18 Jan 2021 18:00:00 +0800</lastBuildDate><atom:link href="https://callous.cn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Mar 2021 20:10:00 +0800</lastBuildDate><atom:link href="https://callous.cn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一次证书证书过期的大无语事件😅</title>
+      <link>https://callous.cn/blog/tech/ssl/</link>
+      <pubDate>Sat, 13 Mar 2021 20:10:00 +0800</pubDate>
+      
+      <guid>https://callous.cn/blog/tech/ssl/</guid>
+      <description>起因 又是原本愉快的周六晚上，又一款收购来的小游戏连接不上服务器😔
+关掉电视，打开电脑，准备接受服务崩溃的局面。然而，这一次检查了一遍服务，好像并没有异常？🤔
+在客户端加了体验权限后，打开 console 后发现如下报错：
+wss 错误，服务又正常，会是什么原因呢？难道是&amp;hellip;&amp;hellip;？😄
+看到这，突然欣慰了点，看来问题很明朗，只要用新的证书替换就好了。然而，事实却是一个大无语事件！
+定位证书 首先从客户端调试中，拿到连接的 wss 地址。登陆到对应的服务器，查看该端口的进程，发现这只是一个流量转发的 nodejs 脚本。如下：
+不过，这里并没有加载证书，只是做了转发，host 指向另一台服务器上的 websocket 服务。
+好吧，那让我们来看看这台服务器上的 nginx，会不会做了反向代理呢？
+结果 nginx 也没有对应端口的反向代理，只是处理了普通的 https 请求。
+没关系，一定是另一台服务器上的 websocket 服务做了这份工作，让我们登陆上去看看。
+结果，并没有找到证书相关的配置，甚至连证书的文件都没有找到！那么&amp;hellip;.. 难道是硬编进了服务的二进制文件里？
+于是，我又去看了这个 websocket 服务的代码，发现也没有！所以证书在哪？？？？
+没关系，没关系。一定是请求在到达转发脚本前，经过了 SLB 或 CDN 。证书一定就在那里！！
+最后，运维的兄弟在给我最新证书的时候，告诉我，域名是直接解析到服务器的，并没有经过任何 SLB 或 CDN
+？？？😫 所以证书究竟在哪里？？？？？？
+这里是很长一段时间&amp;hellip;.
+迷失自我&amp;hellip;.不知所措&amp;hellip;.
+证书到底在哪里😿
+突然！！看着屏幕上转发脚本的目录！
+xxx/xxx/xxx/node_modules/ws-to-tcp/xxxxxx.js 等等，为什么运行的脚本会在 node_modules 目录下？？
+让我来看看他引入的包的代码？？
+那是什么？是的！是他！是他！就是他！证书竟然憋屈地呆在这种阴暗的地方&amp;hellip;&amp;hellip;..
+于是，替换了新证书之后，重启服务，就可以正常连接并开始游戏了。
+结语 最后，正经点，做个总结。虽然想破头皮，但发现原因的时候，并没有多少兴奋了，这不是什么大的技术问题，但真的让人吐血🐶
+说句实话，把证书硬编进二进制都比写在第三方库代码里强，那样至少有迹可循。把证书代码写在这里，就相当于 c++ 开发，把业务代码写进了标准库。
+一般来说第三方库代码是不会加到版本控制里的，先不说维护，万一手贱更新了依赖库，那就等于怎么死都不知道。
+因为这个证书是通配 xxx.xxx.com 的所有二级域名的，有挺多服务都用到，我猜是为了少写几行代码，所以当时那个哥们脑袋一热，把代码写在了这里。
+一定要少干这样的事，git 可是会留名的！</description>
+    </item>
+    
     <item>
       <title>记录一次游戏服务 oom 抢救</title>
       <link>https://callous.cn/blog/tech/oom/</link>
