@@ -5,7 +5,17 @@
     <link>https://callous.cn/blog/</link>
     <description>Recent content in Blogs on callous&#39; blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Mar 2021 20:10:00 +0800</lastBuildDate><atom:link href="https://callous.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Jun 2021 17:00:00 +0800</lastBuildDate><atom:link href="https://callous.cn/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一次 lua 虚拟机堆栈溢出排查</title>
+      <link>https://callous.cn/blog/tech/registry/</link>
+      <pubDate>Thu, 03 Jun 2021 17:00:00 +0800</pubDate>
+      
+      <guid>https://callous.cn/blog/tech/registry/</guid>
+      <description>起因 这一次的问题出现在我开发的安全系统的 agent 中，在正式发布之前，测试到了这个问题，还算幸运😅 在内网测试环境中，agent 一直都没出现问题，直到运行五六天后，突然发现 lua 虚拟机崩溃了&amp;hellip;
+日志分析 {&amp;quot;level&amp;quot;:&amp;quot;error&amp;quot;,&amp;quot;ts&amp;quot;:&amp;quot;2021-05-31 19:50:27.023&amp;quot;,&amp;quot;caller&amp;quot;:&amp;quot;workers/luaworker.go:132&amp;quot;,&amp;quot;msg&amp;quot;:&amp;quot;call run func failed&amp;quot;,&amp;quot;error&amp;quot;:&amp;quot;/data/dep/agent/lua/utils.lua:38: registry overflow\nstack traceback:\n\t[G]: in function &#39;gsub&#39;\n\t/data/dep/agent/lua/utils.lua:38: in function &#39;split&#39;\n\tlua/port.lua:42: in function &#39;inspect&#39;\n\tlua/port.lua:21: in main chunk\n\t[G]: ?&amp;quot;,&amp;quot;lua&amp;quot;:&amp;quot;port.lua&amp;quot;} {&amp;quot;level&amp;quot;:&amp;quot;error&amp;quot;,&amp;quot;ts&amp;quot;:&amp;quot;2021-05-31 19:51:27.104&amp;quot;,&amp;quot;caller&amp;quot;:&amp;quot;workers/luaworker.go:132&amp;quot;,&amp;quot;msg&amp;quot;:&amp;quot;call run func failed&amp;quot;,&amp;quot;error&amp;quot;:&amp;quot;/data/dep/agent/lua/utils.lua:38: registry overflow\nstack traceback:\n\t[G]: in function &#39;gsub&#39;\n\t/data/dep/agent/lua/utils.lua:38: in function &#39;split&#39;\n\tlua/port.lua:42: in function &#39;inspect&#39;\n\tlua/port.lua:21: in main chunk\n\t[G]: ?&amp;quot;,&amp;quot;lua&amp;quot;:&amp;quot;port.lua&amp;quot;} {&amp;quot;level&amp;quot;:&amp;quot;error&amp;quot;,&amp;quot;ts&amp;quot;:&amp;quot;2021-05-31 19:53:27.296&amp;quot;,&amp;quot;caller&amp;quot;:&amp;quot;workers/luaworker.go:132&amp;quot;,&amp;quot;msg&amp;quot;:&amp;quot;call run func failed&amp;quot;,&amp;quot;error&amp;quot;:&amp;quot;/data/dep/agent/lua/utils.lua:38: registry overflow\nstack traceback:\n\t[G]: in function &#39;gsub&#39;\n\t/data/dep/agent/lua/utils.lua:38: in function &#39;split&#39;\n\tlua/port.lua:42: in function &#39;inspect&#39;\n\tlua/port.lua:21: in main chunk\n\t[G]: ?</description>
+    </item>
+    
     <item>
       <title>一次证书证书过期的大无语事件😅</title>
       <link>https://callous.cn/blog/tech/ssl/</link>
